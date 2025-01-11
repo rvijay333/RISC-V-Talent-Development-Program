@@ -29,7 +29,7 @@ Similarly, we run the C code in the RISC-V compiler using the -Ofast optimizatio
 - *Main starting address* = 10184  
   Subtracting them:  
   101B0 - 10184 = 2C  
-  2C ÷ 4 = 0B (11 instructions) using -O1.
+  2C ÷ 4 = 0B (11 instructions) using -Ofast.
 
 Similarly, when we repeat the process using -Ofast, the instructions reduce, indicating a faster way.
 
