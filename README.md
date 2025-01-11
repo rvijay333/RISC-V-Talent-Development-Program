@@ -39,13 +39,13 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 <details>
   <br>
   
-![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_code_sumoneton.png)
+![ Screenshot 1](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_code_sumoneton.png)
   
-![ Screenshot 2](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_codeofast.png)
+![ Screenshot 2](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_codeofast.png)
 
-![ Screenshot 3](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_main_ofast.png)
+![ Screenshot 3](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_main_ofast.png)
 
-![ Screenshot 4](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_main_sumoneton.png)
+![ Screenshot 4](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_main_sumoneton.png)
 
 </details>
 ---
@@ -67,9 +67,9 @@ we also compile and get the output of our code in risc_v compiler .
 <details>
   <br>
   
-![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_output_riscv_task2.png)
+![ Screenshot 1](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_output_riscv_task2.png)
 
-![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/task2_riscv_11_01_24.png)
+![ Screenshot 1](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task2_riscv_11_01_24.png)
 
 </details>
 ---
