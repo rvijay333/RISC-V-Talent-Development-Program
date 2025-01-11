@@ -1,13 +1,38 @@
-8Name : Vijay 
-
-github profile: v-i-j-a-y-333
-
-college: New horizon college of Engineering 
-
-email : rvj151003@gmail.com 
-linked in : https://www.linkedin.com/in/r-vijay-5085022a4
 
 
+
+# RISC-V Internship program powered by SAMSUNG and VSD
+
+### This RISC-V Internship  is based on RISC-V architecture and uses open-source tools to teach students about VLSI Design and RISC-V. The instructor and guide for this internship is KUNAL GHOSH sir, Founder of VLSI SYSTEM DESIGN .
+
+---
+
+## Details
+
+### Name: R . VIJAY
+### College: New Horizon College Of Engineering
+### Email ID: rvj151003@gmail.com
+### GitHub Profile: v-i-j-a-y-333(https://github.com/v-i-j-a-y-333)
+### LinkedIN Profile: R Vijay( https://www.linkedin.com/in/r-vijay-5085022a4)
+
+---
+
+# Task-1
+<details>
+<summary>Task-1: C based lab screenshots</summary>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>Task-1: RISC-V based lab screenshots</summary>
+<br>
+
+
+</details>
+##
 This is the TASK 1 .
 The code is first typed in leafpad editor
 
