@@ -56,6 +56,13 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 In this task we understand the way to debug the code.
 we use specific commands to , check the values stored in our registers and pointers . This hepls us to manage and understand the functioning of the code .
 we also compile and get the output of our code in risc_v compiler .
+
+- *the initial stack pointer value is* = 3FFFFFFB50
+- *the subtracted value is 16(decimal)*
+- *the final value stored in stack pointer is* = 3FFFFFFB50-10(*hexa-decimal*)
+- = 3FFFFFF40 *as shown below*
+
+  
 ## Screenshots Task 2
 <details>
   <br>
