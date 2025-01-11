@@ -56,4 +56,13 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 In this task we understand the way to debug the code.
 we use specific commands to , check the values stored in our registers and pointers . This hepls us to manage and understand the functioning of the code .
 we also compile and get the output of our code in risc_v compiler .
+## Screenshots
+<details>
+  <br>
+  
+![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_output_riscv_task2.png)
 
+![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/task2_riscv_11_01_24.png)
+
+</details>
+---
