@@ -35,7 +35,7 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 
 ---
 
-## Screenshots
+## Screenshots Task 1
 <details>
   <br>
   
@@ -56,7 +56,7 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 In this task we understand the way to debug the code.
 we use specific commands to , check the values stored in our registers and pointers . This hepls us to manage and understand the functioning of the code .
 we also compile and get the output of our code in risc_v compiler .
-## Screenshots
+## Screenshots Task 2
 <details>
   <br>
   
