@@ -38,8 +38,7 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 ## Screenshots
 
 ![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_code_sumoneton.png)
-![ Screenshot 2]([https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_codeofast.png](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_codeofast.png))
-
+![ Screenshot 2](https://github.com/v-i-j-a-y-333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_codeofast.png)
 ![ Screenshot 3](https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_main_ofast.png)
 ![ Screenshot 4](https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_main_sumoneton.png)
 
