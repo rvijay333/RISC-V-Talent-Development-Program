@@ -1,4 +1,4 @@
-# RISC-V Internship program powered by SAMSUNG and VSD
+# RISC-V TALENT DEVELOPMENT PROGRAM
 
 ### This RISC-V Internship is based on RISC-V architecture and uses open-source tools to teach students about VLSI Design and RISC-V. The instructor and guide for this internship is KUNAL GHOSH sir, Founder of VLSI SYSTEM DESIGN.
 
