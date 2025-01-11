@@ -1,9 +1,6 @@
-
-
-
 # RISC-V Internship program powered by SAMSUNG and VSD
 
-### This RISC-V Internship  is based on RISC-V architecture and uses open-source tools to teach students about VLSI Design and RISC-V. The instructor and guide for this internship is KUNAL GHOSH sir, Founder of VLSI SYSTEM DESIGN .
+### This RISC-V Internship is based on RISC-V architecture and uses open-source tools to teach students about VLSI Design and RISC-V. The instructor and guide for this internship is KUNAL GHOSH sir, Founder of VLSI SYSTEM DESIGN.
 
 ---
 
@@ -12,25 +9,39 @@
 ### Name: R . VIJAY
 ### College: New Horizon College Of Engineering
 ### Email ID: rvj151003@gmail.com
-### GitHub Profile: v-i-j-a-y-333(https://github.com/v-i-j-a-y-333)
-### LinkedIN Profile: R Vijay( https://www.linkedin.com/in/r-vijay-5085022a4)
+### GitHub Profile: [v-i-j-a-y-333](https://github.com/v-i-j-a-y-333)
+### LinkedIN Profile: [R Vijay](https://www.linkedin.com/in/r-vijay-5085022a4)
 
 ---
 
 # Task-1
 
-##
-This is the TASK 1 .
-The code is first typed in leafpad editor
+## Description
+This is the TASK 1.  
+The code is first typed in the *leafpad editor*.  
 
-the c-code is run in risc-v compiler using -O1 optimization flag it is seen here at the main block the number of instruction set is 15
+The C code is run in the RISC-V compiler using the -O1 optimization flag. It is seen here that at the main block, the number of instruction sets is *15*.
 
-next in similar way we will run the c-code in risc-v compiler using -Ofast optimization flag it can be seen that the number of instruction from has reduced to 12 instruction set , we can say that the processing speed increases
+Similarly, we run the C code in the RISC-V compiler using the -Ofast optimization flag. It can be seen that the number of instructions has reduced to *12 instruction sets*, which indicates that the processing speed increases.
 
-example : main ending address = 101B0 
-main starting address = 10184 
-subtracting them --> 101B0-10184=2C
-2c ÷ 4 = 0B ( 11 instructions ) . using O1 
+### Example: 
+- *Main ending address* = 101B0  
+- *Main starting address* = 10184  
+  Subtracting them:  
+  101B0 - 10184 = 2C  
+  2C ÷ 4 = 0B (11 instructions) using -O1.
 
+Similarly, when we repeat the process using -Ofast, the instructions reduce, indicating a faster way.
 
-similarily.. when we repeat the process using Ofast . the instructions reduce. indicating its a faster way . 
+---
+
+## Screenshots
+
+![ Screenshot 1](https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_code_sumoneton.png)
+![ Screenshot 2](https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_codeofast.png)
+
+![ Screenshot 3](https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_main_ofast.png)
+![ Screenshot 4](https://github.com/v-i-j-a-y-333/RISC_V_Talent_Development_Program/blob/main/VirtualBox_vsdworkshop_main_sumoneton.png)
+
+---
+
