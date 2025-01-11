@@ -19,19 +19,14 @@
 
 # Task-1
 <details>
-<summary>Task-1: C based lab screenshots</summary>
+<summary>Task-1: lab screenshots</summary>
 <br>
 
 
 
 </details>
 
-<details>
-<summary>Task-1: RISC-V based lab screenshots</summary>
-<br>
 
-
-</details>
 ##
 This is the TASK 1 .
 The code is first typed in leafpad editor
