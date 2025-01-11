@@ -18,13 +18,7 @@
 ---
 
 # Task-1
-<details>
-<summary>Task-1: lab screenshots</summary>
-<br>
 
-
-
-</details>
 
 
 ##
