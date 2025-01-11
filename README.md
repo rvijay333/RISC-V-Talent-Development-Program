@@ -20,6 +20,9 @@
 # Task-1
 
 
+VirtualBox_vsdworkshop_code_sumoneton.png
+###running a c code (sum of number 1 to n ).
+
 
 ##
 This is the TASK 1 .
