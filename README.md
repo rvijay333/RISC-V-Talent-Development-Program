@@ -9,7 +9,7 @@
 ### Name: R . VIJAY
 ### College: New Horizon College Of Engineering
 ### Email ID: rvj151003@gmail.com
-### GitHub Profile: [v-i-j-a-y-333](https://github.com/v-i-j-a-y-333)
+### GitHub Profile: [rvijay333](https://github.com/rvijay333)
 ### LinkedIN Profile: [R Vijay](https://www.linkedin.com/in/r-vijay-5085022a4)
 
 ---
