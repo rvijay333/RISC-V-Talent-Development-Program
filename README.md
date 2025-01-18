@@ -78,28 +78,49 @@ we also compile and get the output of our code in risc_v compiler .
 <h2>Write a simple c program :</h2>
 <h3>C program to calculate area of a circle</h3>
 
-
+<details>
+  <br>
 
 ![C_program](https://github.com/user-attachments/assets/0eab6427-aa44-4487-9d2d-4c11e178ad2e)
+
+</details>
 
 <h2>Compilation using Spike :</h2>
 <h3>O1-</h3>
 
+<details>
+  <br>
+
 ![Screenshot from 2025-01-13 22-28-19](https://github.com/user-attachments/assets/bc0543d2-31ba-4945-a2de-293e1026e0e8)
+</details>
+ 
+
 
 <h3>object dump for O1 -</h3>
 
+<details>
+  <br>
 
 ![o1objdump](https://github.com/user-attachments/assets/27b338d4-a331-439f-a3ec-8ca6b8a2f123)
+</details>
+ 
 
 <h3>Ofast -</h3>
+<details>
+  <br>
 
 ![Screenshot from 2025-01-13 22-23-00](https://github.com/user-attachments/assets/a7b45986-028d-4570-aaa0-ac8397133fc3)
+</details>
+
 
 
 <h3>Object dump for Ofast -</h3>
+<details>
+  <br>
 
 ![ofastobjdump](https://github.com/user-attachments/assets/e145d3c3-599f-49b0-aafb-b3d46b0b62b1)
+</details>
+
 
 
 <h1><ins>TASK 3</ins></h1>
@@ -142,8 +163,12 @@ ld a2, 1800(gp):
        x11 is a1 (binary: 01011).
        x2 is sp (binary: 00010), and so on.
 <h2>The objdump file : </h2>
+<details>
+  <br>
 
 ![ofastobjdump](https://github.com/user-attachments/assets/679d6c42-d7d2-4d02-924c-4e30c569544d)
+</details>
+
 
 <h2> This has the following RISC-V instructions - </h2>
 <p>1. ld</p>
