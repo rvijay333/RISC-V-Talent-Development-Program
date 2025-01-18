@@ -163,11 +163,11 @@ ld a2, 1800(gp):
        x11 is a1 (binary: 01011).
        x2 is sp (binary: 00010), and so on.
 <h2>The objdump file : </h2>
-<ss>
+<details>
   <br>
 
 ![ofastobjdump](https://github.com/user-attachments/assets/679d6c42-d7d2-4d02-924c-4e30c569544d)
-</ss>
+</details>
 
 
 <h2> This has the following RISC-V instructions - </h2>
