@@ -73,7 +73,6 @@ we also compile and get the output of our code in risc_v compiler .
 
 </details>
 ---
-<h1><ins>TASK 2</ins></h1>
 
 <h2>Write a simple c program :</h2>
 <h3>C program to calculate area of a circle</h3>
