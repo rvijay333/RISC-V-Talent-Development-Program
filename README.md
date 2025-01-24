@@ -208,7 +208,7 @@ ld a2, 1800(gp):
 | 15 | call          | 00000000000000000000000011101111 | 1101111  | -       | -        | Offset to function   |
 
 ----
-#TASK4
+# TASK4
 
 #### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
   
@@ -228,7 +228,7 @@ ld a2, 1800(gp):
 |  SLL R15, R1, R2  |  32'h002097b3  |  32'h00208783  |   
   
 
-#### * Output Waveform of various instructions* 
+#### * Output Waveform of various instructions * 
 <details>
   <br>
 
