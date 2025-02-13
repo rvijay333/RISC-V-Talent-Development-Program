@@ -249,7 +249,7 @@ ld a2, 1800(gp):
 ![OUTPUT WAVEFORMS](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
 </details>
 ___
-
+</details>
 <hr>
 
 
@@ -350,7 +350,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 | 1 | Q = 1        | Q = 1       |
 
 
-
+</details>
 
 
 
