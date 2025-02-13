@@ -126,7 +126,7 @@ we also compile and get the output of our code in risc_v compiler .
 ![ofastobjdump](https://github.com/user-attachments/assets/e145d3c3-599f-49b0-aafb-b3d46b0b62b1)
 </details>
 </details>
-
+<hr>
 
 <details>
   <summary><h2><strong>TASK-3</strong></h2></summary>
