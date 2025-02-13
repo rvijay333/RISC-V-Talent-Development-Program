@@ -349,12 +349,11 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 | 0 | Q = 0        | Q = 0       |
 | 1 | Q = 1        | Q = 1       |
 
+### CIRCUIT DIAGRAM 
 
 <details>
   <br>
 
-
-###CIRCUIT DIAGRAM
 ![CIRCUIT DIAGRAM](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/flip_flop_implementation.png)
 </details>
 
