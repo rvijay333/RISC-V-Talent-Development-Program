@@ -241,7 +241,7 @@ ld a2, 1800(gp):
   
 
 #### * Output Waveform of various instructions * 
-</details>
+<details>
   <br>
 
 <details>
