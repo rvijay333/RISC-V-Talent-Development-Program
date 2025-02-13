@@ -259,7 +259,7 @@ ___
 # Flip-Flop Simulation with Selection Indicators on VSDSquadron Mini
 
 ## Overview
-This project demonstrates how to simulate four types of flip‑flops (SR, JK, T, and D) on the VSDSquadron Mini board, which is based on the CH32V00x RISC-V microcontroller. The user can select which flip‑flop to operate by pressing one of four dedicated buttons. Two additional input buttons feed the flip‑flop’s binary inputs (S, R, J, K, T, or D), and the outputs **Q** and **¬Q** are shown on two LEDs. Additionally, four extra indicator LEDs light up to show which flip‑flop is currently selected, and two more LEDs display which input buttons are pressed.
+This project demonstrates how to simulate four types of flip‑flops (SR, JK, T, and D) on the VSDSquadron Mini board, which is based on the CH32V00x RISC-V microcontroller. The user can select which flip‑flop to operate by pressing one of four dedicated buttons. Two additional input buttons feed the flip‑flop’s binary inputs (S, R, J, K, T, or D), and the outputs **Q** and **~Q** are shown on two LEDs. Additionally, four extra indicator LEDs light up to show which flip‑flop is currently selected, and two more LEDs display which input buttons are pressed.
 
 ### Features
 - **4 Flip‑Flop Modes**: SR, JK, T, D
