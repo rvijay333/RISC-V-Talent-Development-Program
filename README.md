@@ -354,7 +354,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 <details>
   <br>
 
-![CIRCUIT DIAGRAM](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/flip_flop_implementation.png)
+![CIRCUIT DIAGRAM](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/flip_flops_using_vsd_squadron_mini.png)
 </details>
 
 </details>
