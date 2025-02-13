@@ -249,7 +249,7 @@ ld a2, 1800(gp):
 ![OUTPUT WAVEFORMS](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
 </details>
 ___
-</details>
+
 <hr>
 
 
