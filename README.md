@@ -245,27 +245,20 @@ ld a2, 1800(gp):
   <br>
 
 <details>
-<summary><h2><strong>TASK-1</strong></h2></summary>
-
-
-
-
-</details>
-
-
-
-
-
-
-
-
-
-
-
-  
 
 ![OUTPUT WAVEFORMS](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
 </details>
 ___
 </details>
 <hr>
+
+
+<details>
+  <summary><h2><strong>TASK-5</strong></h2></summary>
+
+</details>
+
+<hr>
+
+
+
