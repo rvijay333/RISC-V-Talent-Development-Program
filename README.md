@@ -13,7 +13,7 @@
 ### LinkedIN Profile: [R Vijay](https://www.linkedin.com/in/r-vijay-5085022a4)
 
 ---
-
+<hr>
 
 <details>
 <summary><h2><strong>TASK-1</strong></h2></summary>
