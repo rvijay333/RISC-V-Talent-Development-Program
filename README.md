@@ -16,7 +16,7 @@
 
 
 <details>
-  <summary><strong>#Task-1</strong></summary>
+<summary><h2><strong>TASK-1</strong></h2></summary>
 
 ## Description
 This is the TASK 1.  
