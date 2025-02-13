@@ -366,7 +366,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 
 <details>
   <summary><h1><strong>TASK-6</strong></h1></summary>
- <summary><h2><strong>CODE SINPPET</strong></h2></summary>
+
   ```c //
 #include <ch32v00x.h>
 #include <debug.h>
