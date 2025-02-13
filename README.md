@@ -335,13 +335,13 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 | 0 | 0 | No change             | Q stays same|
 | 0 | 1 | Reset (Q = 0)         | Q = 0       |
 | 1 | 0 | Set (Q = 1)           | Q = 1       |
-| 1 | 1 | Toggle (Q = ¬Q)       | Q toggles   |
+| 1 | 1 | Toggle (Q = ~Q)       | Q toggles   |
 
 ### T Flip‑Flop
 | T | Action       | Q (New)     |
 |---|--------------|-------------|
 | 0 | No change    | Q stays same|
-| 1 | Toggle Q     | Q = ¬Q      |
+| 1 | Toggle Q     | Q = ~Q      |
 
 ### D Flip‑Flop
 | D | Action       | Q (New)     |
@@ -349,6 +349,14 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 | 0 | Q = 0        | Q = 0       |
 | 1 | Q = 1        | Q = 1       |
 
+
+<details>
+  <br>
+
+
+
+![CIRCUIT DIAGRAM](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
+</details>
 
 </details>
 
