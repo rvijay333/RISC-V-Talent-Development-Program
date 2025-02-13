@@ -14,7 +14,9 @@
 
 ---
 
-# Task-1
+
+<details>
+  <summary><strong>Task-1</strong></summary>
 
 ## Description
 This is the TASK 1.  
@@ -46,6 +48,8 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 ![ Screenshot 3](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_main_ofast.png)
 
 ![ Screenshot 4](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/VirtualBox_vsdworkshop_main_sumoneton.png)
+
+</details>
 
 </details>
 ---
