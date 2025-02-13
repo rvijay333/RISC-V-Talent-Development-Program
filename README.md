@@ -54,7 +54,9 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 </details>
 ---
 
-# Task-2
+
+<details>
+  <summary><strong>Task-2</strong></summary>
 
 ## Description
 In this task we understand the way to debug the code.
@@ -123,7 +125,7 @@ we also compile and get the output of our code in risc_v compiler .
 
 ![ofastobjdump](https://github.com/user-attachments/assets/e145d3c3-599f-49b0-aafb-b3d46b0b62b1)
 </details>
-
+</details>
 
 
 <h1><ins>TASK 3</ins></h1>
