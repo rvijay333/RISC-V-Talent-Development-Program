@@ -56,7 +56,7 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 
 
 <details>
-  <summary><strong>Task-2</strong></summary>
+  <summary><h2><strong>TASK-2</strong></h2></summary>
 
 ## Description
 In this task we understand the way to debug the code.
