@@ -256,6 +256,103 @@ ___
 <details>
   <summary><h2><strong>TASK-5</strong></h2></summary>
 
+# Flip-Flop Simulation with Selection Indicators on VSDSquadron Mini
+
+## Overview
+This project demonstrates how to simulate four types of flip‑flops (SR, JK, T, and D) on the VSDSquadron Mini board, which is based on the CH32V00x RISC-V microcontroller. The user can select which flip‑flop to operate by pressing one of four dedicated buttons. Two additional input buttons feed the flip‑flop’s binary inputs (S, R, J, K, T, or D), and the outputs **Q** and **¬Q** are shown on two LEDs. Additionally, four extra indicator LEDs light up to show which flip‑flop is currently selected, and two more LEDs display which input buttons are pressed.
+
+### Features
+- **4 Flip‑Flop Modes**: SR, JK, T, D
+- **Selection Indicators**: Each flip‑flop mode has a dedicated LED.
+- **Input Indicators**: Two LEDs show which input buttons are currently pressed.
+- **Output LEDs**: Always show **Q** and **¬Q** for every flip‑flop type.
+- **GPIO-Based**: Entirely uses GPIO pins for inputs and outputs—no extra multiplexers needed.
+
+### Components Required
+
+| Component                   | Quantity | Purpose/Description                                |
+|-----------------------------|----------|----------------------------------------------------|
+| VSDSquadron Mini Board      | 1        | The RISC-V microcontroller development board.      |
+| Push Buttons                | 6        | 4 for flip‑flop selection, 2 for input bits.         |
+| LEDs                        | 8        | 2 for input indicators, 2 for outputs, 4 for flip‑flop selection. |
+| Resistors (330 Ω)           | 8        | Current-limiting for each LED.                     |
+| Breadboard                  | 1        | For prototyping and wiring.                        |
+| Jumper Wires                | ~20      | For making connections.                            |
+| USB-C Cable                 | 1        | To power and program the VSDSquadron Mini.         |
+
+## Circuit Connections
+
+### Power & Ground
+- **VSDSquadron Mini 3.3 V** → Breadboard’s top (red) power rail.
+- **VSDSquadron Mini GND** → Breadboard’s bottom (blue) ground rail.
+
+### Flip‑Flop Selection Buttons (active low)
+- **SR** → PD0  
+- **JK** → PD1  
+- **T** → PD2  
+- **D** → PD3  
+*Each button’s other terminal connects to ground.*
+
+### Input Buttons (active low)
+- **BTN_IN1** → PD4  
+- **BTN_IN2** → PD5  
+*Each button’s other terminal connects to ground.*
+
+### Input Indicator LEDs (active high) on Port D
+- **LED_IN1** anode → PD6 → (330 Ω resistor) → GND  
+- **LED_IN2** anode → PD7 → (330 Ω resistor) → GND
+
+### Output LEDs (active high) on Port C
+- **LED_OUT1 (Q)** anode → PC0 → (330 Ω resistor) → GND  
+- **LED_OUT2 (¬Q)** anode → PC1 → (330 Ω resistor) → GND
+
+### Selection Indicator LEDs (active high) on Port C
+- **LED_SEL_SR** anode → PC2 → (330 Ω resistor) → GND  
+- **LED_SEL_JK** anode → PC3 → (330 Ω resistor) → GND  
+- **LED_SEL_T** anode → PC4 → (330 Ω resistor) → GND  
+- **LED_SEL_D** anode → PC5 → (330 Ω resistor) → GND
+
+## Working Principle
+1. **Selection**: Press one of the four flip‑flop selection buttons. The corresponding selection LED lights up.
+2. **Input**: Provide binary inputs by pressing BTN_IN1 (in1) and BTN_IN2 (in2). The input indicator LEDs show which buttons are pressed.
+3. **Processing**: The `ProcessFlipFlop` function applies the logic for SR, JK, T, or D flip‑flops to determine the new state **Q**.
+4. **Outputs**: Two LEDs always display **Q** and **¬Q**, regardless of flip‑flop type.
+5. **Visual Feedback**: After a short delay, the selection resets so the user can choose another flip‑flop type.
+
+## Truth Tables (Summary)
+
+### SR Flip‑Flop
+| S | R | Action             | Q (New)     |
+|---|---|--------------------|-------------|
+| 0 | 0 | No change          | Q stays same|
+| 0 | 1 | Reset Q to 0       | Q = 0       |
+| 1 | 0 | Set Q to 1         | Q = 1       |
+| 1 | 1 | Invalid (No change) | Q stays same|
+
+### JK Flip‑Flop
+| J | K | Action                | Q (New)     |
+|---|---|-----------------------|-------------|
+| 0 | 0 | No change             | Q stays same|
+| 0 | 1 | Reset (Q = 0)         | Q = 0       |
+| 1 | 0 | Set (Q = 1)           | Q = 1       |
+| 1 | 1 | Toggle (Q = ¬Q)       | Q toggles   |
+
+### T Flip‑Flop
+| T | Action       | Q (New)     |
+|---|--------------|-------------|
+| 0 | No change    | Q stays same|
+| 1 | Toggle Q     | Q = ¬Q      |
+
+### D Flip‑Flop
+| D | Action       | Q (New)     |
+|---|--------------|-------------|
+| 0 | Q = 0        | Q = 0       |
+| 1 | Q = 1        | Q = 1       |
+
+
+
+
+
 </details>
 
 <hr>
