@@ -52,7 +52,7 @@ Similarly, when we repeat the process using -Ofast, the instructions reduce, ind
 </details>
 
 </details>
----
+
 
 <hr>
 <details>
@@ -129,7 +129,7 @@ we also compile and get the output of our code in risc_v compiler .
 
 
 <details>
-<summary><h2><strong>TASK-3</strong></h2></summary>
+  <summary><h2><strong>TASK-3</strong></h2></summary>
 <h1><ins>TASK 3</ins></h1>
 <h2>RISC-V Instructions</h2>
 
@@ -216,7 +216,7 @@ ld a2, 1800(gp):
 
 ----
 </details>
-
+</details>
 <hr>
 
 # TASK4
