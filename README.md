@@ -370,7 +370,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
   The program is : Implementation of flip flops (SR , JK , T and D ) using VSD Squadron mini .
   
   # Principle :
-  The code is written in C for the CH32V00x-based VSDSquadron Mini board and uses its peripheral library for GPIO operations. It configures several GPIO pins: some are set as inputs (with pull-ups) for reading push buttons, and others as outputs (in push-pull mode) for driving LEDs. The main loop polls the state of the selection and input buttons, then processes the flip‑flop logic (SR, JK, T, or D) based on those inputs. It updates the output LEDs to show the computed state (Q and ¬Q) and uses extra LEDs as visual indicators for the selected flip‑flop mode. Additionally, basic interrupt handlers for NMI and HardFault are defined using the fast interrupt attribute. Essentially, the code demonstrates how to combine hardware interfacing (reading buttons and driving LEDs) with digital logic implemented in software on a RISC-V microcontroller.
+  The system uses a microcontroller to simulate basic flip‑flop circuits. It reads which flip‑flop mode to use (SR, JK, T, or D) through dedicated selection buttons and shows the selected mode using indicator LEDs. Two additional buttons provide binary input values. The microcontroller processes these inputs using the logic of the selected flip‑flop—setting, resetting, toggling, or directly assigning the output state (Q). The result is then shown on two output LEDs (one displaying Q and the other its inverse, ~Q), while extra LEDs indicate which input buttons are active. Essentially, the project combines user inputs and simple digital logic to mimic the behavior of flip‑flops, with visual feedback provided by LEDs.
   <hr>
    <h4>Program :</h4> 
 
@@ -614,3 +614,6 @@ void HardFault_Handler(void)
 
 </details>
 <hr>
+<hr>
+<hr>
+_ _ _
