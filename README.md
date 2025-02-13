@@ -130,7 +130,7 @@ we also compile and get the output of our code in risc_v compiler .
 
 <details>
   <summary><h2><strong>TASK-3</strong></h2></summary>
-<h1><ins>TASK 3</ins></h1>
+
 <h2>RISC-V Instructions</h2>
 
 <h2>RISC-V uses six basic instruction formats:</h2></p>
@@ -219,7 +219,8 @@ ld a2, 1800(gp):
 </details>
 <hr>
 
-# TASK4
+<details>
+  <summary><h2><strong>TASK-4</strong></h2></summary>
 
 #### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
   
@@ -246,3 +247,5 @@ ld a2, 1800(gp):
 ![OUTPUT WAVEFORMS](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
 </details>
 ___
+</details>
+<hr>
