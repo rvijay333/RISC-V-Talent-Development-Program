@@ -366,7 +366,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 
 <details>
   <summary><h2><strong>TASK-6</strong></h2></summary>
-```c #include <stdio.h> int main(void) { printf("Hello, World!\n"); return 0; } ```
+
   
 
 </details>
