@@ -353,7 +353,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 
 
 
-</details>
+
 
 <hr>
 
