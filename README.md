@@ -614,6 +614,5 @@ void HardFault_Handler(void)
 
 </details>
 <hr>
-<hr>
-<hr>
+
 _ _ _
