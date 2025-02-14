@@ -663,9 +663,6 @@ void HardFault_Handler(void)
 </details>
 
 
-
-<hr>
-<details>
 [VIDEO LINK](https://drive.google.com/file/d/1s8N6XZwIr4PlNXRCMQaYny9uJnWqKaPh/view?usp=sharing)
 </details>
 <hr>
