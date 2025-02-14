@@ -3,28 +3,28 @@
 
 // -------------------- Pin Definitions --------------------
 // Flip-Flop Selection Buttons (active low)
-#define BTN_SR   GPIO_Pin_0  // Select SR flip-flop
-#define BTN_JK   GPIO_Pin_1  // Select JK flip-flop
-#define BTN_T    GPIO_Pin_2  // Select T flip-flop
-#define BTN_D    GPIO_Pin_3  // Select D flip-flop
+#define BTN_SR   GPIO_Pin_0  // SR flip-flop select
+#define BTN_JK   GPIO_Pin_1  // JK flip-flop select
+#define BTN_T    GPIO_Pin_2  // T flip-flop select
+#define BTN_D    GPIO_Pin_3  // D flip-flop select
 
 // Input Buttons (active low)
-#define BTN_IN1  GPIO_Pin_4  // For S/J/T/D
-#define BTN_IN2  GPIO_Pin_5  // For R/K; not used if T/D
+#define BTN_IN1  GPIO_Pin_4  // Input for S/J/T/D
+#define BTN_IN2  GPIO_Pin_5  // Input for R/K (used for SR/JK)
 
 // Input Indicator LEDs on Port D (active high)
-#define LED_IN1  GPIO_Pin_6  // Lights when BTN_IN1 is pressed
-#define LED_IN2  GPIO_Pin_7  // Lights when BTN_IN2 is pressed
+#define LED_IN1  GPIO_Pin_6  // Indicates BTN_IN1 pressed
+#define LED_IN2  GPIO_Pin_7  // Indicates BTN_IN2 pressed
 
 // Output LEDs on Port C (active high)
-#define LED_OUT1 GPIO_Pin_0  // Shows Q
-#define LED_OUT2 GPIO_Pin_1  // Shows ¬Q
+#define LED_OUT1 GPIO_Pin_0  // Displays Q
+#define LED_OUT2 GPIO_Pin_1  // Displays ¬Q
 
 // Selection Indicator LEDs on Port C (active high)
-#define LED_SEL_SR GPIO_Pin_2
-#define LED_SEL_JK GPIO_Pin_3
-#define LED_SEL_T  GPIO_Pin_4
-#define LED_SEL_D  GPIO_Pin_5
+#define LED_SEL_SR GPIO_Pin_2  // Indicates SR flip-flop selected
+#define LED_SEL_JK GPIO_Pin_3  // Indicates JK flip-flop selected
+#define LED_SEL_T  GPIO_Pin_4  // Indicates T flip-flop selected
+#define LED_SEL_D  GPIO_Pin_5  // Indicates D flip-flop selected
 
 // Flip-Flop Type Enumeration
 typedef enum {
@@ -36,18 +36,24 @@ typedef enum {
 } FlipFlopType;
 
 // Global Variables
-volatile FlipFlopType selectedFF = FF_NONE;
-volatile uint8_t Q = 0;  // Holds the flip-flop's current state
+volatile FlipFlopType selectedFF = FF_SR;  // Default flip-flop is SR
+volatile uint8_t Q = 0;  // Holds the current flip-flop output
 
 // -------------- Function Prototypes --------------
 void GPIO_Config(void);
 uint8_t ReadButton(GPIO_TypeDef* port, uint16_t pin);
 void SetLED(GPIO_TypeDef* port, uint16_t pin, uint8_t state);
 void ProcessFlipFlop(FlipFlopType ffType, uint8_t in1, uint8_t in2);
-void UpdateOutputLEDs(FlipFlopType ffType, uint8_t Q);
+void UpdateOutputLEDs(uint8_t Q);
 void ShowSelectedFF(FlipFlopType ffType);
-void Delay_Ms(uint32_t ms);
-void Delay_Init(void);
+void Delay_Ms(uint32_t ms);  // Using framework's delay function
+void Delay_Init(void);       // Using framework's delay function
+
+// ------------------- Exception Handlers -------------------
+void NMI_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void NMI_Handler(void) {}
+void HardFault_Handler(void) { while(1); }
 
 // ---------------- GPIO Configuration ---------------
 void GPIO_Config(void)
@@ -58,22 +64,22 @@ void GPIO_Config(void)
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 
-    // Configure Buttons (selection + input) on Port D as input pull-up
+    // Configure selection and input buttons (Port D) as input with pull-up
     GPIO_InitStructure.GPIO_Pin = BTN_SR | BTN_JK | BTN_T | BTN_D | BTN_IN1 | BTN_IN2;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    // Configure Input Indicator LEDs on Port D as output push-pull
+    // Configure input indicator LEDs (Port D) as output push-pull
     GPIO_InitStructure.GPIO_Pin = LED_IN1 | LED_IN2;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    // Configure Output LEDs on Port C (Q, ¬Q) as output push-pull
+    // Configure output LEDs (Port C) as output push-pull
     GPIO_InitStructure.GPIO_Pin = LED_OUT1 | LED_OUT2;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-    // Configure Selection Indicator LEDs on Port C as output push-pull
+    // Configure selection indicator LEDs (Port C) as output push-pull
     GPIO_InitStructure.GPIO_Pin = LED_SEL_SR | LED_SEL_JK | LED_SEL_T | LED_SEL_D;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
@@ -103,24 +109,14 @@ void ProcessFlipFlop(FlipFlopType ffType, uint8_t in1, uint8_t in2)
                 Q = 1;
             else if(!in1 && in2)
                 Q = 0;
+			else if(in1 && in2)
+			    Q=!Q;	
             break;
         case FF_JK:
-            if(in1 == 0 && in2 == 0)
-            {
-                // no change
-            }
-            else if(in1 && !in2)
-            {
-                Q = 1;
-            }
-            else if(!in1 && in2)
-            {
-                Q = 0;
-            }
-            else if(in1 && in2)
-            {
-                Q = !Q;
-            }
+            if(in1 == 0 && in2 == 0) { }
+            else if(in1 && !in2) { Q = 1; }
+            else if(!in1 && in2) { Q = 0; }
+            else if(in1 && in2) { Q = !Q; }
             break;
         case FF_T:
             if(in1)
@@ -135,7 +131,7 @@ void ProcessFlipFlop(FlipFlopType ffType, uint8_t in1, uint8_t in2)
 }
 
 // ------------- Update Output LEDs --------------
-void UpdateOutputLEDs(FlipFlopType ffType, uint8_t Q)
+void UpdateOutputLEDs(uint8_t Q)
 {
     SetLED(GPIOC, LED_OUT1, Q);
     SetLED(GPIOC, LED_OUT2, !Q);
@@ -144,29 +140,18 @@ void UpdateOutputLEDs(FlipFlopType ffType, uint8_t Q)
 // --- Show Selected Flip-Flop Indicator LED ---
 void ShowSelectedFF(FlipFlopType ffType)
 {
-    // Turn off all selection indicator LEDs first
     SetLED(GPIOC, LED_SEL_SR, 0);
     SetLED(GPIOC, LED_SEL_JK, 0);
     SetLED(GPIOC, LED_SEL_T, 0);
     SetLED(GPIOC, LED_SEL_D, 0);
 
-    // Turn on the LED for the selected flip-flop
     switch(ffType)
     {
-        case FF_SR:
-            SetLED(GPIOC, LED_SEL_SR, 1);
-            break;
-        case FF_JK:
-            SetLED(GPIOC, LED_SEL_JK, 1);
-            break;
-        case FF_T:
-            SetLED(GPIOC, LED_SEL_T, 1);
-            break;
-        case FF_D:
-            SetLED(GPIOC, LED_SEL_D, 1);
-            break;
-        default:
-            break;
+        case FF_SR: SetLED(GPIOC, LED_SEL_SR, 1); break;
+        case FF_JK: SetLED(GPIOC, LED_SEL_JK, 1); break;
+        case FF_T:  SetLED(GPIOC, LED_SEL_T, 1); break;
+        case FF_D:  SetLED(GPIOC, LED_SEL_D, 1); break;
+        default: break;
     }
 }
 
@@ -175,61 +160,34 @@ int main(void)
 {
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
     SystemCoreClockUpdate();
-    Delay_Init();
+    Delay_Init();  // Use framework's delay initialization
     GPIO_Config();
 
-    selectedFF = FF_NONE;
+    // Set default state and selection
+    selectedFF = FF_SR;
     Q = 0;
-    // Turn off all LEDs initially
     SetLED(GPIOD, LED_IN1 | LED_IN2, 0);
     SetLED(GPIOC, LED_OUT1 | LED_OUT2 | LED_SEL_SR | LED_SEL_JK | LED_SEL_T | LED_SEL_D, 0);
+    ShowSelectedFF(selectedFF);
 
     while(1)
     {
-        // Check which flip-flop selection button is pressed
-        if(ReadButton(GPIOD, BTN_SR)) {
-            selectedFF = FF_SR;
-        }
-        else if(ReadButton(GPIOD, BTN_JK)) {
-            selectedFF = FF_JK;
-        }
-        else if(ReadButton(GPIOD, BTN_T)) {
-            selectedFF = FF_T;
-        }
-        else if(ReadButton(GPIOD, BTN_D)) {
-            selectedFF = FF_D;
-        }
+        if(ReadButton(GPIOD, BTN_SR)) { selectedFF = FF_SR; }
+        else if(ReadButton(GPIOD, BTN_JK)) { selectedFF = FF_JK; }
+        else if(ReadButton(GPIOD, BTN_T)) { selectedFF = FF_T; }
+        else if(ReadButton(GPIOD, BTN_D)) { selectedFF = FF_D; }
+        
+        ShowSelectedFF(selectedFF);
 
-        // If a flip-flop is selected, process its input and output
-        if(selectedFF != FF_NONE)
-        {
-            ShowSelectedFF(selectedFF);
+        uint8_t in1 = ReadButton(GPIOD, BTN_IN1);
+        uint8_t in2 = (selectedFF == FF_SR || selectedFF == FF_JK) ? ReadButton(GPIOD, BTN_IN2) : 0;
+        SetLED(GPIOD, LED_IN1, in1);
+        SetLED(GPIOD, LED_IN2, in2);
 
-            uint8_t in1 = ReadButton(GPIOD, BTN_IN1);
-            uint8_t in2 = (selectedFF == FF_SR || selectedFF == FF_JK) ? ReadButton(GPIOD, BTN_IN2) : 0;
-
-            SetLED(GPIOD, LED_IN1, in1);
-            SetLED(GPIOD, LED_IN2, in2);
-
-            ProcessFlipFlop(selectedFF, in1, in2);
-            UpdateOutputLEDs(selectedFF, Q);
-
-            Delay_Ms(1000);
-
-            selectedFF = FF_NONE;
-            SetLED(GPIOD, LED_IN1, 0);
-            SetLED(GPIOD, LED_IN2, 0);
-            ShowSelectedFF(FF_NONE);
-        }
+        ProcessFlipFlop(selectedFF, in1, in2);
+        UpdateOutputLEDs(Q);
 
         Delay_Ms(100);
     }
 }
 
-void NMI_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
-void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
-void NMI_Handler(void) {}
-void HardFault_Handler(void)
-{
-    while (1) {}
-}
