@@ -105,13 +105,16 @@ void ProcessFlipFlop(FlipFlopType ffType, uint8_t in1, uint8_t in2)
     switch(ffType)
     {
         case FF_SR:
-            if(in1 && !in2)
-                Q = 1;
-            else if(!in1 && in2)
-                Q = 0;
-			else if(in1 && in2)
-			    Q=!Q;	
-            break;
+             if(in1 && in2) {
+        Q = 2;  // Special value indicating invalid state.
+    }
+    else if(in1 && !in2) {
+        Q = 1;
+    }
+    else if(!in1 && in2) {
+        Q = 0;
+    }
+    break;
         case FF_JK:
             if(in1 == 0 && in2 == 0) { }
             else if(in1 && !in2) { Q = 1; }
@@ -133,8 +136,14 @@ void ProcessFlipFlop(FlipFlopType ffType, uint8_t in1, uint8_t in2)
 // ------------- Update Output LEDs --------------
 void UpdateOutputLEDs(uint8_t Q)
 {
-    SetLED(GPIOC, LED_OUT1, Q);
-    SetLED(GPIOC, LED_OUT2, !Q);
+    if(selectedFF == FF_SR && Q == 2) {
+        // Invalid state: light both output LEDs.
+        SetLED(GPIOC, LED_OUT1, 1);
+        SetLED(GPIOC, LED_OUT2, 1);
+    } else {
+        SetLED(GPIOC, LED_OUT1, Q);
+        SetLED(GPIOC, LED_OUT2, !Q);
+    }
 }
 
 // --- Show Selected Flip-Flop Indicator LED ---
