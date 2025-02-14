@@ -626,6 +626,45 @@ void HardFault_Handler(void)
 
 
 
+#### * CIRCUIT CONNECTIONS * 
+<details>
+  <br>
+
+
+
+![CIRCUIT CONNECTIONS](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/flip_flops_using_vsd_squadron_mini.png)
+</details>
+
+#### * IMAGE 1 * 
+<details>
+  <br>
+
+
+
+![IMAGE 1](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/TASK6_1.jpeg)
+</details>
+
+#### * IMAGE 2 * 
+<details>
+  <br>
+
+
+
+![IMAGE 2](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/TASK6_2.jpeg)
+</details>
+
+#### * IMAGE 3 * 
+<details>
+  <br>
+
+
+
+![IMAGE 3](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/TASK6_3.jpeg)
+</details>
+
+
+
+
 [VIDEO LINK](https://drive.google.com/file/d/1s8N6XZwIr4PlNXRCMQaYny9uJnWqKaPh/view?usp=sharing)
 </details>
 <hr>
