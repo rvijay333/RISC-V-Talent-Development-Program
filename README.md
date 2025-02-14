@@ -249,13 +249,13 @@ ld a2, 1800(gp):
 ![OUTPUT WAVEFORMS](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
 </details>
 
-
+#### * Output Waveform interpretation * 
 <details>
   <br>
 
 
 
-![OUTPUT WAVEFORM INTERPRETATION](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/task4.png)
+![OUTPUT WAVEFORM INTERPRETATION](https://github.com/rvijay333/RISC-V-Talent-Development-Program/blob/main/TASK_4_interpretation.png)
 </details>
 ___
 ___
