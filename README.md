@@ -407,7 +407,7 @@ This project demonstrates how to simulate four types of flip‑flops (SR, JK, T,
 
 // Output LEDs on Port C (active high)
 #define LED_OUT1 GPIO_Pin_0  // Shows Q
-#define LED_OUT2 GPIO_Pin_1  // Shows ¬Q
+#define LED_OUT2 GPIO_Pin_1  // Shows ~Q
 
 // Selection Indicator LEDs on Port C (active high)
 #define LED_SEL_SR GPIO_Pin_2
@@ -458,7 +458,7 @@ void GPIO_Config(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    // Configure Output LEDs on Port C (Q, ¬Q) as output push-pull
+    // Configure Output LEDs on Port C (Q, ~Q) as output push-pull
     GPIO_InitStructure.GPIO_Pin = LED_OUT1 | LED_OUT2;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
